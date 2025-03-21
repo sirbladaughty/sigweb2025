@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta charset="UTF-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Simple Leaflet Map with Heatmap</title> 
+        <link rel="stylesheet" 
+href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256
+kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" /> 
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" 
+integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" 
+crossorigin=""></script> 
+        <style> 
+            #header { 
+                background-color: rgb(73, 130, 230); 
+                text-align: center; 
+                color:rgb(0, 0, 0); 
+                padding: 20px; 
+                font-family: 'Georgia'; 
+            } 
+            .ket { 
+                    background-color:rgb(73, 130, 230); 
+                    color:white; 
+                    text-align:center; 
+                    font-family: 'Georgia'; 
+                    font-size: small; 
+                    padding: 20px; 
+                } 
+        </style> 
+    </head> 
+    <body> 
+        <div id="header"> 
+            <p align="center"><b>Persebaran gempa di New Zealand selama periode 
+Juli - Agustus 2013</b></p> 
+        </div> 
+        <div id="map" style="width: 100%; height: 450px;"></div> 
+ 
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" 
+integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" 
+crossorigin=""></script> 
+        <script src="https://leaflet.github.io/Leaflet.heat/dist/leaflet
+heat.js"></script> 
+        <script 
+src="https://www.mediafire.com/file/rfjxyjb314fy29k/2013-earthquake.json/file"></script> 
+        <script> 
+             
+            var map = L.map('map').setView([-41.5546, 174.146], 10); 
+            mapLink = 
+'<a href="http://openstreetmap.org">OpenStreetMap</a>'; 
+L.tileLayer( 
+'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{ 
+attribution: '&copy;' + mapLink + 'Contributors', 
+maxZoom:18, 
+}).addTo(map); 
+var heat = L.heatLayer(quakePoints,{ 
+radius: 20, 
+blur: 13, 
+maxZoom: 17, 
+}).addTo(map); 
+</script> 
+<div class="ket"> 
+<p>Dibuat oleh @ <b>Salsabila Ratna Mulya</b></p> 
+</div> 
+</body> 
+</html> 
