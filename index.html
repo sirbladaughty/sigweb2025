@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>UTS Praktikum SIG berbasis Web</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Metadata QGIS -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
+  <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+  <style>
+  html, body, #map {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  }
+  </style>
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto">
+      <a href="index.html" class="logo me-auto"><img src="https://luk.staff.ugm.ac.id/logo/UGM/Resmi/Hitam-putih.gif" width="50px" height="50px" alt="" class="img-fluid"></a>
+      </h1>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
+          <li><a class="nav-link scrollto" href="#about">Tentang</a></li>
+          <li><a class="nav-link scrollto" href="#services">Peta Perbandingan</a></li>
+          <li><a class="nav-link scrollto" href="#departments">Peta tiap Provinsi</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center" style="background-image: url(https://cruisingindonesia.com/media/k2/items/cache/94d43e327d9303539cb1e2aac7032668_XL.jpg);">
+    <div class="container">
+      <h1 style="color:white">Peta Perbandingan Persebaran Fasilitas Kesehatan di Pulau Sulawesi</h1>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Informasi Demografis</h3>
+              <p>
+                Pulau Sulawesi dibagi menjadi 6 wilayah administrasi yaitu Sulawesi Utara, Gorontalo, Sulawesi Tengah,
+                Sulawesi Tenggara, Sulawesi Barat, dan Sulawesi Selatan.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Kabupaten dan Kota</h4>
+                    <p>Dari 6 provinsi terdapat 81 kabupaten dan kota terbagi menjadi 70 kabupaten dan 11 kota.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Populasi</h4>
+                    <p>Menurut data Direktorat Jenderal Kependudukan dan Pencatatan Sipil (Dukcapil),
+                      total penduduk di Pulau Sulawesi berjumlah 20,34 juta jiwa pada Juni 2022</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="bx bx-images"></i>
+                    <h4>Fasilitas Kesehatan</h4>
+                    <p>Faskes yang diambil datanya adalah Puskesmas, Rumah Sakit, Posyandu, dan Klinik.</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+        <div class="section-title">
+          <h2>TENTANG</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-stretch position-relative">
+            <img src="https://www.abundancethebook.com/wp-content/uploads/2019/10/peta-sulawesi-1.jpg" width="300" height="400"></a>
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5" style="text-align: justify;">
+            <p>Sulawesi (baca: sulawési, IPA: [sulawesi]), dahulu pernah dikenal sebagai Celebes adalah sebuah pulau di Indonesia. 
+              Sulawesi merupakan salah satu dari empat Kepulauan Sunda Besar dan merupakan pulau terbesar kesebelas di dunia. 
+              Pulau Sulawesi terletak di sebelah timur Pulau Kalimantan, sebelah barat Kepulauan Maluku, dan sebelah selatan Mindanao dan Kepulauan Sulu, Filipina.<br>
+              Jumlah Fasilitas Kesehatan di Pulau Sulawesi mencakup 225 Rumah Sakit, 2029 Puskesmas, 12591 Posyandu, dan 376 Klinik.
+              Fasilitas Kesehatan tersebut umumnya ditemui di kota-kota besar di tiap-tiap provinsi. Untuk kabupaten kecil dan jauh dari kota 
+              sebagian besar hanya memiliki 1 rumah sakit di tiap kabupatennya yang menunjukkan bahwa kurangnya pemerataan fasilitas 
+              kesehatan di Pulau Sulawesi.
+            </p>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="count-box">
+              <i class="fas fa-user-md"></i>
+              <span data-purecounter-start="0" data-purecounter-end="225" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Rumah Sakit</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="far fa-hospital"></i>
+              <span data-purecounter-start="0" data-purecounter-end="2029" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Puskesmas</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-flask"></i>
+              <span data-purecounter-start="0" data-purecounter-end="12591" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Posyandu</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="fas fa-award"></i>
+              <span data-purecounter-start="0" data-purecounter-end="376" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Klinik</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>PETA PERBANDINGAN JUMLAH FASILITAS KESEHATAN<br>
+          DI PULAU SULAWESI</h2>
+        </div>
+
+        <div class="row">
+        <div id="map" style ="width:100%;height:600px" ></div>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+        <script src="data/SULAWESISELATAN_2.js"></script>
+        <script src="data/SULAWESIBARAT_3.js"></script>
+        <script src="data/SULAWESITENGGARA_4.js"></script>
+        <script src="data/SULAWESITENGAH_5.js"></script>
+        <script src="data/SULAWESIUTARA_6.js"></script>
+        <script src="data/GORONTALO_7.js"></script>
+        <script>
+        var highlightLayer;
+        function highlightFeature(e) {
+            highlightLayer = e.target;
+
+            if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#ffff00',
+              });
+            } else {
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 1
+              });
+            }
+            highlightLayer.openPopup();
+        }
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:25, minZoom:1
+        }).fitBounds([[-8.024777032848341,107.99646949850177],[5.29471074603879,137.29206420343112]]);
+        var hash = new L.Hash(map);
+        map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        L.control.locate({locateOptions: {maxZoom: 19}}).addTo(map);
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+        }
+        map.createPane('pane_OpenStreetMap_0');
+        map.getPane('pane_OpenStreetMap_0').style.zIndex = 400;
+        var layer_OpenStreetMap_0 = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            pane: 'pane_OpenStreetMap_0',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 18,
+            minNativeZoom: 0,
+            maxNativeZoom: 19
+        });
+        layer_OpenStreetMap_0;
+        map.addLayer(layer_OpenStreetMap_0);
+        map.createPane('pane_GoogleMaps_1');
+        map.getPane('pane_GoogleMaps_1').style.zIndex = 401;
+        var layer_GoogleMaps_1 = L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleMaps_1',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 18,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
+        });
+        layer_GoogleMaps_1;
+        map.addLayer(layer_GoogleMaps_1);
+        function pop_SULAWESISELATAN_2(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">KAB_KOTA</th>\
+                        <td>' + (feature.properties['KAB_KOTA'] !== null ? autolinker.link(feature.properties['KAB_KOTA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Puskesmas</th>\
+                        <td>' + (feature.properties['Puskesmas'] !== null ? autolinker.link(feature.properties['Puskesmas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Rumahsakit</th>\
+                        <td>' + (feature.properties['Rumahsakit'] !== null ? autolinker.link(feature.properties['Rumahsakit'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Posyandu</th>\
+                        <td>' + (feature.properties['Posyandu'] !== null ? autolinker.link(feature.properties['Posyandu'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Klinik</th>\
+                        <td>' + (feature.properties['Klinik'] !== null ? autolinker.link(feature.properties['Klinik'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Provinsi</th>\
+                        <td>' + (feature.properties['Provinsi'] !== null ? autolinker.link(feature.properties['Provinsi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total_fsks</th>\
+                        <td>' + (feature.properties['total_fsks'] !== null ? autolinker.link(feature.properties['total_fsks'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_SULAWESISELATAN_2_0(feature) {
+            if (feature.properties['total_fsks'] >= 72.000000 && feature.properties['total_fsks'] <= 133.600000 ) {
+                return {
+                pane: 'pane_SULAWESISELATAN_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(254,235,226,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 133.600000 && feature.properties['total_fsks'] <= 179.600000 ) {
+                return {
+                pane: 'pane_SULAWESISELATAN_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(251,180,185,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 179.600000 && feature.properties['total_fsks'] <= 230.400000 ) {
+                return {
+                pane: 'pane_SULAWESISELATAN_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(247,104,161,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 230.400000 && feature.properties['total_fsks'] <= 260.600000 ) {
+                return {
+                pane: 'pane_SULAWESISELATAN_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(197,27,138,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 260.600000 && feature.properties['total_fsks'] <= 1093.000000 ) {
+                return {
+                pane: 'pane_SULAWESISELATAN_2',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(122,1,119,1.0)',
+                interactive: true,
+            }
+            }
+        }
+        map.createPane('pane_SULAWESISELATAN_2');
+        map.getPane('pane_SULAWESISELATAN_2').style.zIndex = 402;
+        map.getPane('pane_SULAWESISELATAN_2').style['mix-blend-mode'] = 'normal';
+        var layer_SULAWESISELATAN_2 = new L.geoJson(json_SULAWESISELATAN_2, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_SULAWESISELATAN_2',
+            layerName: 'layer_SULAWESISELATAN_2',
+            pane: 'pane_SULAWESISELATAN_2',
+            onEachFeature: pop_SULAWESISELATAN_2,
+            style: style_SULAWESISELATAN_2_0,
+        });
+        bounds_group.addLayer(layer_SULAWESISELATAN_2);
+        map.addLayer(layer_SULAWESISELATAN_2);
+        function pop_SULAWESIBARAT_3(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">KAB_KOTA</th>\
+                        <td>' + (feature.properties['KAB_KOTA'] !== null ? autolinker.link(feature.properties['KAB_KOTA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Puskesmas</th>\
+                        <td>' + (feature.properties['Puskesmas'] !== null ? autolinker.link(feature.properties['Puskesmas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Rumahsakit</th>\
+                        <td>' + (feature.properties['Rumahsakit'] !== null ? autolinker.link(feature.properties['Rumahsakit'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Posyandu</th>\
+                        <td>' + (feature.properties['Posyandu'] !== null ? autolinker.link(feature.properties['Posyandu'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Klinik</th>\
+                        <td>' + (feature.properties['Klinik'] !== null ? autolinker.link(feature.properties['Klinik'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Provinsi</th>\
+                        <td>' + (feature.properties['Provinsi'] !== null ? autolinker.link(feature.properties['Provinsi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total_fsks</th>\
+                        <td>' + (feature.properties['total_fsks'] !== null ? autolinker.link(feature.properties['total_fsks'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_SULAWESIBARAT_3_0(feature) {
+            if (feature.properties['total_fsks'] >= 106.000000 && feature.properties['total_fsks'] <= 129.000000 ) {
+                return {
+                pane: 'pane_SULAWESIBARAT_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(250,250,250,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 129.000000 && feature.properties['total_fsks'] <= 167.000000 ) {
+                return {
+                pane: 'pane_SULAWESIBARAT_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(189,189,189,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 167.000000 && feature.properties['total_fsks'] <= 236.000000 ) {
+                return {
+                pane: 'pane_SULAWESIBARAT_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(128,128,128,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 236.000000 && feature.properties['total_fsks'] <= 276.000000 ) {
+                return {
+                pane: 'pane_SULAWESIBARAT_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(66,66,66,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 276.000000 && feature.properties['total_fsks'] <= 333.000000 ) {
+                return {
+                pane: 'pane_SULAWESIBARAT_3',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(5,5,5,1.0)',
+                interactive: true,
+            }
+            }
+        }
+        map.createPane('pane_SULAWESIBARAT_3');
+        map.getPane('pane_SULAWESIBARAT_3').style.zIndex = 403;
+        map.getPane('pane_SULAWESIBARAT_3').style['mix-blend-mode'] = 'normal';
+        var layer_SULAWESIBARAT_3 = new L.geoJson(json_SULAWESIBARAT_3, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_SULAWESIBARAT_3',
+            layerName: 'layer_SULAWESIBARAT_3',
+            pane: 'pane_SULAWESIBARAT_3',
+            onEachFeature: pop_SULAWESIBARAT_3,
+            style: style_SULAWESIBARAT_3_0,
+        });
+        bounds_group.addLayer(layer_SULAWESIBARAT_3);
+        map.addLayer(layer_SULAWESIBARAT_3);
+        function pop_SULAWESITENGGARA_4(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">KAB_KOTA</th>\
+                        <td>' + (feature.properties['KAB_KOTA'] !== null ? autolinker.link(feature.properties['KAB_KOTA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Puskesmas</th>\
+                        <td>' + (feature.properties['Puskesmas'] !== null ? autolinker.link(feature.properties['Puskesmas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Rumahsakit</th>\
+                        <td>' + (feature.properties['Rumahsakit'] !== null ? autolinker.link(feature.properties['Rumahsakit'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Posyandu</th>\
+                        <td>' + (feature.properties['Posyandu'] !== null ? autolinker.link(feature.properties['Posyandu'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Klinik</th>\
+                        <td>' + (feature.properties['Klinik'] !== null ? autolinker.link(feature.properties['Klinik'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Provinsi</th>\
+                        <td>' + (feature.properties['Provinsi'] !== null ? autolinker.link(feature.properties['Provinsi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total_fsks</th>\
+                        <td>' + (feature.properties['total_fsks'] !== null ? autolinker.link(feature.properties['total_fsks'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_SULAWESITENGGARA_4_0(feature) {
+            if (feature.properties['total_fsks'] >= 110.000000 && feature.properties['total_fsks'] <= 167.200000 ) {
+                return {
+                pane: 'pane_SULAWESITENGGARA_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(252,251,253,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 167.200000 && feature.properties['total_fsks'] <= 183.000000 ) {
+                return {
+                pane: 'pane_SULAWESITENGGARA_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(220,219,236,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 183.000000 && feature.properties['total_fsks'] <= 230.000000 ) {
+                return {
+                pane: 'pane_SULAWESITENGGARA_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(163,159,203,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 230.000000 && feature.properties['total_fsks'] <= 279.600000 ) {
+                return {
+                pane: 'pane_SULAWESITENGGARA_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(106,81,163,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 279.600000 && feature.properties['total_fsks'] <= 493.000000 ) {
+                return {
+                pane: 'pane_SULAWESITENGGARA_4',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(63,0,125,1.0)',
+                interactive: true,
+            }
+            }
+        }
+        map.createPane('pane_SULAWESITENGGARA_4');
+        map.getPane('pane_SULAWESITENGGARA_4').style.zIndex = 404;
+        map.getPane('pane_SULAWESITENGGARA_4').style['mix-blend-mode'] = 'normal';
+        var layer_SULAWESITENGGARA_4 = new L.geoJson(json_SULAWESITENGGARA_4, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_SULAWESITENGGARA_4',
+            layerName: 'layer_SULAWESITENGGARA_4',
+            pane: 'pane_SULAWESITENGGARA_4',
+            onEachFeature: pop_SULAWESITENGGARA_4,
+            style: style_SULAWESITENGGARA_4_0,
+        });
+        bounds_group.addLayer(layer_SULAWESITENGGARA_4);
+        map.addLayer(layer_SULAWESITENGGARA_4);
+        function pop_SULAWESITENGAH_5(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">KAB_KOTA</th>\
+                        <td>' + (feature.properties['KAB_KOTA'] !== null ? autolinker.link(feature.properties['KAB_KOTA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Puskesmas</th>\
+                        <td>' + (feature.properties['Puskesmas'] !== null ? autolinker.link(feature.properties['Puskesmas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Rumahsakit</th>\
+                        <td>' + (feature.properties['Rumahsakit'] !== null ? autolinker.link(feature.properties['Rumahsakit'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Posyandu</th>\
+                        <td>' + (feature.properties['Posyandu'] !== null ? autolinker.link(feature.properties['Posyandu'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Klinik</th>\
+                        <td>' + (feature.properties['Klinik'] !== null ? autolinker.link(feature.properties['Klinik'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Provinsi</th>\
+                        <td>' + (feature.properties['Provinsi'] !== null ? autolinker.link(feature.properties['Provinsi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total_fsks</th>\
+                        <td>' + (feature.properties['total_fsks'] !== null ? autolinker.link(feature.properties['total_fsks'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_SULAWESITENGAH_5_0(feature) {
+            if (feature.properties['total_fsks'] >= 47.000000 && feature.properties['total_fsks'] <= 84.600000 ) {
+                return {
+                pane: 'pane_SULAWESITENGAH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(247,252,245,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 84.600000 && feature.properties['total_fsks'] <= 142.800000 ) {
+                return {
+                pane: 'pane_SULAWESITENGAH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(201,234,194,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 142.800000 && feature.properties['total_fsks'] <= 172.800000 ) {
+                return {
+                pane: 'pane_SULAWESITENGAH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(123,199,124,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 172.800000 && feature.properties['total_fsks'] <= 223.200000 ) {
+                return {
+                pane: 'pane_SULAWESITENGAH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(42,146,75,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 223.200000 && feature.properties['total_fsks'] <= 437.000000 ) {
+                return {
+                pane: 'pane_SULAWESITENGAH_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(0,68,27,1.0)',
+                interactive: true,
+            }
+            }
+        }
+        map.createPane('pane_SULAWESITENGAH_5');
+        map.getPane('pane_SULAWESITENGAH_5').style.zIndex = 405;
+        map.getPane('pane_SULAWESITENGAH_5').style['mix-blend-mode'] = 'normal';
+        var layer_SULAWESITENGAH_5 = new L.geoJson(json_SULAWESITENGAH_5, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_SULAWESITENGAH_5',
+            layerName: 'layer_SULAWESITENGAH_5',
+            pane: 'pane_SULAWESITENGAH_5',
+            onEachFeature: pop_SULAWESITENGAH_5,
+            style: style_SULAWESITENGAH_5_0,
+        });
+        bounds_group.addLayer(layer_SULAWESITENGAH_5);
+        map.addLayer(layer_SULAWESITENGAH_5);
+        function pop_SULAWESIUTARA_6(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">KAB_KOTA</th>\
+                        <td>' + (feature.properties['KAB_KOTA'] !== null ? autolinker.link(feature.properties['KAB_KOTA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Puskesmas</th>\
+                        <td>' + (feature.properties['Puskesmas'] !== null ? autolinker.link(feature.properties['Puskesmas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Rumahsakit</th>\
+                        <td>' + (feature.properties['Rumahsakit'] !== null ? autolinker.link(feature.properties['Rumahsakit'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Posyandu</th>\
+                        <td>' + (feature.properties['Posyandu'] !== null ? autolinker.link(feature.properties['Posyandu'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Klinik</th>\
+                        <td>' + (feature.properties['Klinik'] !== null ? autolinker.link(feature.properties['Klinik'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Provinsi</th>\
+                        <td>' + (feature.properties['Provinsi'] !== null ? autolinker.link(feature.properties['Provinsi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total_fsks</th>\
+                        <td>' + (feature.properties['total_fsks'] !== null ? autolinker.link(feature.properties['total_fsks'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_SULAWESIUTARA_6_0(feature) {
+            if (feature.properties['total_fsks'] >= 16.000000 && feature.properties['total_fsks'] <= 22.400000 ) {
+                return {
+                pane: 'pane_SULAWESIUTARA_6',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(255,245,240,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 22.400000 && feature.properties['total_fsks'] <= 26.800000 ) {
+                return {
+                pane: 'pane_SULAWESIUTARA_6',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(252,190,165,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 26.800000 && feature.properties['total_fsks'] <= 33.600000 ) {
+                return {
+                pane: 'pane_SULAWESIUTARA_6',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(251,112,80,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 33.600000 && feature.properties['total_fsks'] <= 44.400000 ) {
+                return {
+                pane: 'pane_SULAWESIUTARA_6',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(211,32,32,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 44.400000 && feature.properties['total_fsks'] <= 74.000000 ) {
+                return {
+                pane: 'pane_SULAWESIUTARA_6',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(103,0,13,1.0)',
+                interactive: true,
+            }
+            }
+        }
+        map.createPane('pane_SULAWESIUTARA_6');
+        map.getPane('pane_SULAWESIUTARA_6').style.zIndex = 406;
+        map.getPane('pane_SULAWESIUTARA_6').style['mix-blend-mode'] = 'normal';
+        var layer_SULAWESIUTARA_6 = new L.geoJson(json_SULAWESIUTARA_6, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_SULAWESIUTARA_6',
+            layerName: 'layer_SULAWESIUTARA_6',
+            pane: 'pane_SULAWESIUTARA_6',
+            onEachFeature: pop_SULAWESIUTARA_6,
+            style: style_SULAWESIUTARA_6_0,
+        });
+        bounds_group.addLayer(layer_SULAWESIUTARA_6);
+        map.addLayer(layer_SULAWESIUTARA_6);
+        function pop_GORONTALO_7(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    for (i in e.target._eventParents) {
+                        e.target._eventParents[i].resetStyle(e.target);
+                    }
+                    if (typeof layer.closePopup == 'function') {
+                        layer.closePopup();
+                    } else {
+                        layer.eachLayer(function(feature){
+                            feature.closePopup()
+                        });
+                    }
+                },
+                mouseover: highlightFeature,
+            });
+            var popupContent = '<table>\
+                    <tr>\
+                        <th scope="row">KAB_KOTA</th>\
+                        <td>' + (feature.properties['KAB_KOTA'] !== null ? autolinker.link(feature.properties['KAB_KOTA'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Puskesmas</th>\
+                        <td>' + (feature.properties['Puskesmas'] !== null ? autolinker.link(feature.properties['Puskesmas'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Rumahsakit</th>\
+                        <td>' + (feature.properties['Rumahsakit'] !== null ? autolinker.link(feature.properties['Rumahsakit'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Posyandu</th>\
+                        <td>' + (feature.properties['Posyandu'] !== null ? autolinker.link(feature.properties['Posyandu'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Klinik</th>\
+                        <td>' + (feature.properties['Klinik'] !== null ? autolinker.link(feature.properties['Klinik'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">Provinsi</th>\
+                        <td>' + (feature.properties['Provinsi'] !== null ? autolinker.link(feature.properties['Provinsi'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <th scope="row">total_fsks</th>\
+                        <td>' + (feature.properties['total_fsks'] !== null ? autolinker.link(feature.properties['total_fsks'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            layer.bindPopup(popupContent, {maxHeight: 400});
+        }
+
+        function style_GORONTALO_7_0(feature) {
+            if (feature.properties['total_fsks'] >= 147.000000 && feature.properties['total_fsks'] <= 158.000000 ) {
+                return {
+                pane: 'pane_GORONTALO_7',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(247,251,255,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 158.000000 && feature.properties['total_fsks'] <= 160.000000 ) {
+                return {
+                pane: 'pane_GORONTALO_7',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(200,220,240,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 160.000000 && feature.properties['total_fsks'] <= 240.000000 ) {
+                return {
+                pane: 'pane_GORONTALO_7',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(115,178,216,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 240.000000 && feature.properties['total_fsks'] <= 246.000000 ) {
+                return {
+                pane: 'pane_GORONTALO_7',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(41,121,185,1.0)',
+                interactive: true,
+            }
+            }
+            if (feature.properties['total_fsks'] >= 246.000000 && feature.properties['total_fsks'] <= 453.000000 ) {
+                return {
+                pane: 'pane_GORONTALO_7',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(8,48,107,1.0)',
+                interactive: true,
+            }
+            }
+        }
+        map.createPane('pane_GORONTALO_7');
+        map.getPane('pane_GORONTALO_7').style.zIndex = 407;
+        map.getPane('pane_GORONTALO_7').style['mix-blend-mode'] = 'normal';
+        var layer_GORONTALO_7 = new L.geoJson(json_GORONTALO_7, {
+            attribution: '',
+            interactive: true,
+            dataVar: 'json_GORONTALO_7',
+            layerName: 'layer_GORONTALO_7',
+            pane: 'pane_GORONTALO_7',
+            onEachFeature: pop_GORONTALO_7,
+            style: style_GORONTALO_7_0,
+        });
+        bounds_group.addLayer(layer_GORONTALO_7);
+        map.addLayer(layer_GORONTALO_7);
+        var osmGeocoder = new L.Control.Geocoder({
+            collapsed: true,
+            position: 'topleft',
+            text: 'Search',
+            title: 'Testing'
+        }).addTo(map);
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .className += ' fa fa-search';
+        document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
+        .title += 'Search for a place';
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'GORONTALO<br /><table><tr><td style="text-align: center;"><img src="legend/GORONTALO_7_1471580.png" /></td><td>147 - 158</td></tr><tr><td style="text-align: center;"><img src="legend/GORONTALO_7_1581601.png" /></td><td>158 - 160</td></tr><tr><td style="text-align: center;"><img src="legend/GORONTALO_7_1602402.png" /></td><td>160 - 240</td></tr><tr><td style="text-align: center;"><img src="legend/GORONTALO_7_2402463.png" /></td><td>240 - 246</td></tr><tr><td style="text-align: center;"><img src="legend/GORONTALO_7_2464534.png" /></td><td>246 - 453</td></tr></table>': layer_GORONTALO_7,'SULAWESI UTARA<br /><table><tr><td style="text-align: center;"><img src="legend/SULAWESIUTARA_6_162240.png" /></td><td>16 - 22,4</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESIUTARA_6_2242681.png" /></td><td>22,4 - 26,8</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESIUTARA_6_2683362.png" /></td><td>26,8 - 33,6</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESIUTARA_6_3364443.png" /></td><td>33,6 - 44,4</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESIUTARA_6_444744.png" /></td><td>44,4 - 74</td></tr></table>': layer_SULAWESIUTARA_6,'SULAWESI TENGAH<br /><table><tr><td style="text-align: center;"><img src="legend/SULAWESITENGAH_5_47850.png" /></td><td>47 - 85</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESITENGAH_5_851431.png" /></td><td>85 - 143</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESITENGAH_5_1431732.png" /></td><td>143 - 173</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESITENGAH_5_1732233.png" /></td><td>173 - 223</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESITENGAH_5_2234374.png" /></td><td>223 - 437</td></tr></table>': layer_SULAWESITENGAH_5,'SULAWESI TENGGARA<br /><table><tr><td style="text-align: center;"><img src="legend/SULAWESITENGGARA_4_1101670.png" /></td><td>110 - 167</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESITENGGARA_4_1671831.png" /></td><td>167 - 183</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESITENGGARA_4_1832302.png" /></td><td>183 - 230</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESITENGGARA_4_2302803.png" /></td><td>230 - 280</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESITENGGARA_4_2804934.png" /></td><td>280 - 493</td></tr></table>': layer_SULAWESITENGGARA_4,'SULAWESI BARAT<br /><table><tr><td style="text-align: center;"><img src="legend/SULAWESIBARAT_3_1061290.png" /></td><td>106 - 129</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESIBARAT_3_1291671.png" /></td><td>129 - 167</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESIBARAT_3_1672362.png" /></td><td>167 - 236</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESIBARAT_3_2362763.png" /></td><td>236 - 276</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESIBARAT_3_2763334.png" /></td><td>276 - 333</td></tr></table>': layer_SULAWESIBARAT_3,'SULAWESI SELATAN<br /><table><tr><td style="text-align: center;"><img src="legend/SULAWESISELATAN_2_721340.png" /></td><td>72 - 134</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESISELATAN_2_1341801.png" /></td><td>134 - 180</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESISELATAN_2_1802302.png" /></td><td>180 - 230</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESISELATAN_2_2302613.png" /></td><td>230 - 261</td></tr><tr><td style="text-align: center;"><img src="legend/SULAWESISELATAN_2_26110934.png" /></td><td>261 - 1093</td></tr></table>': layer_SULAWESISELATAN_2,"Google Maps": layer_GoogleMaps_1,"OpenStreetMap": layer_OpenStreetMap_0,},{collapsed:false}).addTo(map);
+        setBounds();
+        var i = 0;
+        layer_SULAWESISELATAN_2.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['KAB_KOTA'] !== null?String('<div style="color: #323232; font-size: 8pt; font-weight: bold; font-family: \'Calisto MT\', sans-serif;">' + layer.feature.properties['KAB_KOTA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_SULAWESISELATAN_2'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_SULAWESIBARAT_3.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['KAB_KOTA'] !== null?String('<div style="color: #323232; font-size: 8pt; font-weight: bold; font-family: \'Calisto MT\', sans-serif;">' + layer.feature.properties['KAB_KOTA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_SULAWESIBARAT_3'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_SULAWESITENGGARA_4.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['KAB_KOTA'] !== null?String('<div style="color: #323232; font-size: 8pt; font-weight: bold; font-family: \'Calisto MT\', sans-serif;">' + layer.feature.properties['KAB_KOTA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_SULAWESITENGGARA_4'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_SULAWESITENGAH_5.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['KAB_KOTA'] !== null?String('<div style="color: #323232; font-size: 8pt; font-weight: bold; font-family: \'Calisto MT\', sans-serif;">' + layer.feature.properties['KAB_KOTA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_SULAWESITENGAH_5'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_SULAWESIUTARA_6.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['KAB_KOTA'] !== null?String('<div style="color: #323232; font-size: 8pt; font-weight: bold; font-family: \'Calisto MT\', sans-serif;">' + layer.feature.properties['KAB_KOTA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_SULAWESIUTARA_6'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        var i = 0;
+        layer_GORONTALO_7.eachLayer(function(layer) {
+            var context = {
+                feature: layer.feature,
+                variables: {}
+            };
+            layer.bindTooltip((layer.feature.properties['KAB_KOTA'] !== null?String('<div style="color: #323232; font-size: 8pt; font-weight: bold; font-family: \'Calisto MT\', sans-serif;">' + layer.feature.properties['KAB_KOTA']) + '</div>':''), {permanent: true, offset: [-0, -16], className: 'css_GORONTALO_7'});
+            labels.push(layer);
+            totalMarkers += 1;
+              layer.added = true;
+              addLabel(layer, i);
+              i++;
+        });
+        resetLabels([layer_SULAWESISELATAN_2,layer_SULAWESIBARAT_3,layer_SULAWESITENGGARA_4,layer_SULAWESITENGAH_5,layer_SULAWESIUTARA_6,layer_GORONTALO_7]);
+        map.on("zoomend", function(){
+            resetLabels([layer_SULAWESISELATAN_2,layer_SULAWESIBARAT_3,layer_SULAWESITENGGARA_4,layer_SULAWESITENGAH_5,layer_SULAWESIUTARA_6,layer_GORONTALO_7]);
+        });
+        map.on("layeradd", function(){
+            resetLabels([layer_SULAWESISELATAN_2,layer_SULAWESIBARAT_3,layer_SULAWESITENGGARA_4,layer_SULAWESITENGAH_5,layer_SULAWESIUTARA_6,layer_GORONTALO_7]);
+        });
+        map.on("layerremove", function(){
+            resetLabels([layer_SULAWESISELATAN_2,layer_SULAWESIBARAT_3,layer_SULAWESITENGGARA_4,layer_SULAWESITENGAH_5,layer_SULAWESIUTARA_6,layer_GORONTALO_7]);
+        });
+        </script>
+        </div>
+        <div>
+          <img src="legenda.png" width="100%" height="350px">
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Departments Section ======= -->
+    <section id="departments" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>PETA PERSEBARAN FASILITAS KESEHATAN TIAP PROVINSI<br>
+          DI PULAU SULAWESI</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-4 ">
+            <div class="icon-box">
+              <div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Coat_of_arms_of_North_Sulawesi.svg/1200px-Coat_of_arms_of_North_Sulawesi.svg.png" width="50px" height="50px"></i></div>
+              <h4>SULAWESI UTARA</a></h4>
+              <a href="SulawesiUtara.html" class="btn-get-started scrollto">Lihat Disini</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Coat_of_arms_of_Gorontalo.svg" width="50px" height="56px"></div>
+              <h4><a href="">GORONTALO</a></h4>
+              <a href="Gorontalo.html" class="btn-get-started scrollto">Lihat Disini</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Coat_of_arms_of_Central_Sulawesi.svg/1200px-Coat_of_arms_of_Central_Sulawesi.svg.png" width="50px" height="60px"></div>
+              <h4><a href="">SULAWESI TENGAH</a></h4>
+              <a href="SulawesiTengah.html" class="btn-get-started scrollto">Lihat Disini</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 mt-4">
+            <div class="icon-box">
+              <div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Coat_of_arms_of_Southeast_Sulawesi.svg/1200px-Coat_of_arms_of_Southeast_Sulawesi.svg.png" width="50px" height="50px"></div>
+              <h4><a href="">SULAWESI TENGGARA</a></h4>
+              <a href="SulawesiTenggara.html" class="btn-get-started scrollto">Lihat Disini</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 mt-4">
+            <div class="icon-box">
+              <div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Coat_of_arms_of_West_Sulawesi.svg/1200px-Coat_of_arms_of_West_Sulawesi.svg.png" width="50px" height="56px"></div>
+              <h4><a href="">SULAWESI BARAT</a></h4>
+              <a href="SulawesiBarat.html" class="btn-get-started scrollto">Lihat Disini</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-4 mt-4">
+            <div class="icon-box">
+              <div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Coat_of_arms_of_South_Sulawesi.svg/1200px-Coat_of_arms_of_South_Sulawesi.svg.png" width="50px" height="56px"></div>
+              <h4><a href="">SULAWESI SELATAN</a></h4>
+              <a href="SulawesiSelatan.html" class="btn-get-started scrollto">Lihat Disini</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Kontak</h2>
+        </div>
+        <div class="col-lg-6 col-md-6 footer-contact">
+          <div><img src="https://luk.staff.ugm.ac.id/logo/UGM/Resmi/Hitam-putih.gif" width="100px" height="100px"></div>
+          <h6><br>
+          Program Studi Teknologi Survei dan Pemetaan Dasar<br>
+          Departemen Teknologi Kebumian<br>
+          Sekolah Vokasi<br>
+          Universitas Gadjah Mada</h6>
+          <p>
+            Gedung Perpustakaan SV UGM, Sekip Unit 1, Jl. Persatuan,<br>
+            Blimbing Sari, Caturtunggal, Kec. Depok, Kab. Sleman,<br>
+            Daerah Istimewa Yogyakarta 55281
+            <strong>Telp:</strong>(0274) 6492347<br>
+            <strong>Fax:</strong>(0274) 551255<br>
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2134.0534957816685!2d110.37429071621384!3d-7.7748170392952325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a584a6eaf7cbb%3A0x294cd98559dc9c8c!2sVocational%20College%20UGM!5e0!3m2!1sen!2sid!4v1681978343059!5m2!1sen!2sid" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Salsabila Ratna Mulya</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://twitter.com/tspugm_official" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.instagram.com/tspugm.official/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://tsp.sv.ugm.ac.id/" class="google-plus"><i class="bx bxl-google"></i></a>
+        <a href="https://www.youtube.com/channel/UCfI56diBt6kkeOyOwsIX2kQ" class="linkedin"><i class="bx bxl-youtube"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
